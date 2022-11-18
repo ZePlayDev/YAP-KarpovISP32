@@ -5,8 +5,16 @@ class Program
     static void Main(string[] args)
     {   
         int n = int.Parse(Console.ReadLine());
-        float minutes = (1 + n) * 5.3f;
-        int hours = 12 + n;
-        Console.WriteLine("{0} {1}", hours, Math.Round(minutes));
+        //float minutes = (1 + n) * 5.3f;
+        //int hours = 12 + n;
+        //Console.WriteLine("{0} {1}", hours, Math.Round(minutes));
+        int j = 12;
+        int k = 5;
+        for(int i = 0; i < n; ++i)
+        {
+            j++;
+            k += 5;
+        }
+        Console.WriteLine(j+" "+k);
     }
 }
