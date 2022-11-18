@@ -1,0 +1,15 @@
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string[] h = Console.ReadLine().Split(' ').Select(x=>x).ToArray();
+        for(int i = 0; i < h.Length; ++i)
+        {
+            Console.WriteLine(h[i]);
+        }
+
+    }
+}
