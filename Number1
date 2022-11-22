@@ -19,7 +19,7 @@ namespace ProgLang
             }
             while (b != 0)
             {
-                k.Add(b);
+                k.Add(b%10);
                 b /= 10;
             }
             for (int i = 0; i < f.Count; ++i)
