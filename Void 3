@@ -1,0 +1,32 @@
+using System;
+
+class Program
+{
+    static int[] GetCubes(int startVal, int endVal)
+    {
+        int[] cubes = new int[(1+endVal) - startVal];
+        int j = 0;
+        for(int i = startVal; i <= endVal; i++)
+        {
+            cubes[j] = i*i*i;
+            j++;
+        }
+        return cubes;
+    }
+
+    static void PrintSum(int[] cubes)
+    {
+        int sum = 0;
+        for(int i = 0; i < cubes.Length; i++)
+        {
+            sum += cubes[i];
+        }
+        Console.WriteLine(sum);
+    }
+    public static void Main()
+    {
+        int startValue = int.Parse(Console.ReadLine());
+        int endValue = int.Parse(Console.ReadLine());
+        PrintSum(GetCubes(startValue, endValue));
+    }
+}
