@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<string> str = new List<string> {"Q", "Q", "Q", "O", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q", "Q","Q" };
+        int ind=0;
+        bool YesNo = false;
+        for(int i = 0; i < str.Count; i++)
+        {
+            if(str[i] == "O")
+            {
+                ind = i;
+                YesNo = true;
+                break;
+            }
+        }
+        if (YesNo)
+        {
+            Console.WriteLine("Индекс элемента содержащий символ 'O': " + ind);
+        }
+        else Console.WriteLine("Элемента 'О' нет в данном списке.");
+
+    }
+}
