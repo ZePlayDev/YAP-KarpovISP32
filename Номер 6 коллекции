@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<int> sir = new List<int>();
+        int begDiap = int.Parse(Console.ReadLine());
+        int endDiap = int.Parse(Console.ReadLine());
+
+        sir = Posl(begDiap, endDiap);
+        foreach (int i in sir) Console.Write(i + " ");
+    }
+
+    static List<int> Posl(int firstNum, int endNum)
+    {
+        List<int> vs = new List<int>();
+        if (firstNum < endNum)
+        {
+            for (int i = firstNum; i <= endNum; i++)
+            {
+                vs.Add(i);
+            }
+        }
+        else
+        {
+            for (int i = endNum; i <= firstNum; i++)
+            {
+                vs.Add(i);
+            }
+        }
+        
+
+        return vs;
+    }
+}
