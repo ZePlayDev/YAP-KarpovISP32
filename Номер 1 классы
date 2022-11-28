@@ -1,0 +1,35 @@
+using System;
+
+
+public class Worker
+{
+    public int rate,days;
+    public string name, surname;
+    public void GetFullName()
+    {
+        Console.WriteLine("Имя и фамилия сотрудника: "+name+" "+surname);
+    }
+    public void GetSalary()
+    {
+        Console.WriteLine("Зарплата: "+(rate*days));
+    }
+}
+class Program
+{
+    static void Main()
+    {
+        Worker worker0 = new Worker();
+        Console.Write("Name: ");
+        worker0.name = Console.ReadLine();
+        Console.Write("Surname: ");
+        worker0.surname = Console.ReadLine();
+        Console.Write("Rate: ");
+        worker0.rate = int.Parse(Console.ReadLine());
+        Console.Write("Days: ");
+        worker0.days = int.Parse(Console.ReadLine());
+        Console.WriteLine();
+        worker0.GetFullName();
+        worker0.GetSalary();
+
+    }
+}
