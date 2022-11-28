@@ -1,0 +1,26 @@
+sing System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<int> sir = new List<int>();
+        int firstNum = int.Parse(Console.ReadLine());
+
+        sir = Posl(firstNum);
+        foreach (int i in sir) Console.Write(i + " ");
+    }
+
+    static List<int> Posl(int firstNum)
+    {
+        List<int> vs=new List<int> { firstNum};
+        while (firstNum != 1)
+        {
+            firstNum = firstNum % 2 == 0 ? firstNum = firstNum / 2 : firstNum = firstNum * 3 + 1;
+            vs.Add(firstNum);
+        }
+
+        return vs;
+    }
+}
