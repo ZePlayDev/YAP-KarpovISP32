@@ -1,0 +1,34 @@
+using System;
+using System.Linq;
+
+namespace ProgLang
+{
+    class Barrel
+    {
+        public int volume;
+        public string material;
+        public Barrel(int v, string m)
+        {
+            volume = v;
+            material = m;
+        }
+        public void ToChange(int v)
+        {
+            volume = v;
+        }
+        public void ToChange(string m)
+        {
+            material = m;
+        }
+    }
+    class Program
+    {
+        public static void Main()
+        {
+            var barrel = new Barrel(200, "oak");
+            barrel.ToChange(100);
+            barrel.ToChange("beech");
+            Console.WriteLine($"{barrel.material}, {barrel.volume}");
+        }
+    }
+}
