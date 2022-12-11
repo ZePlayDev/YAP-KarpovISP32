@@ -1,0 +1,25 @@
+using System;
+
+class Tree
+{
+	public string tree;
+	public int nothing;
+	public Tree(string t, int n)
+	{
+		tree = t;
+		nothing = n;
+	}
+
+
+}
+
+class Program
+{
+	public static void Main()
+	{
+		var tree1 = new Tree("сосна", -6);
+		var tree2 = new Tree("береза", 80);
+		Console.WriteLine($"Дерево {tree1.tree} и что-то еще {tree1.nothing}");
+		Console.WriteLine($"Дерево {tree2.tree} и что-то еще {tree2.nothing}");
+	}
+}
